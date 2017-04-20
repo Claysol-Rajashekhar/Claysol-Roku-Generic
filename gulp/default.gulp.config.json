@@ -1,0 +1,14 @@
+{
+    "applicationName": "Claysol-Roku-Generic",
+    "versionMajor": "1",
+    "versionMinor": "0",
+    "rokuIp": "",
+    "rokuPassword": "",
+    "developerIdPassword": "",
+    "developerIdPackage": "",
+    "buildFolder": "build/",
+    "distIncludes": [],
+    "debug": true,
+    "gulpTempFolder": "gulp/tmp/",
+    "manifest": {}
+}
