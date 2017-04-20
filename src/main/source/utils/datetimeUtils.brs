@@ -170,14 +170,6 @@ Function hoursLeft(seconds As Integer) As Integer
 End Function
 
 '******************************************************
-'Get remaining hours from a total seconds
-'******************************************************
-Function hoursLeft(seconds As Integer) As Integer
-    hours% = seconds / 3600
-    return hours%
-End Function
-
-'******************************************************
 'Get remaining minutes from a total seconds
 '******************************************************
 Function minutesLeft(seconds As Integer) As Integer

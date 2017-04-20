@@ -121,22 +121,6 @@ Sub PrintXML(element As Object, depth As Integer)
     endif
     print
 end sub
-function stripHTML(text as String) as String
-    parsedText = ""
-    carriageReturn = chr(13)
-    newline = chr(10)
-
-    ' Replace <br> and <p> with newline
-    lineBreak = "<br />|<br>|</br>|<br/>|<p>"
-    regex = createObject("roRegex", lineBreak, "i")
-    parsedText = regex.replaceAll(text, newline)
-
-    ' Remove all other tags
-    regex = createObject("roRegex", "<[^<]+?>", "i")
-    parsedText = regex.replaceAll(parsedText, "")
-
-    return parsedText
-end function
 
 '  Decode html characters
 '   @example

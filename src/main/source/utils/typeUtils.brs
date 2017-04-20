@@ -17,15 +17,6 @@ function isString(item) as Boolean
 end function
 
 '******************************************************
-'Trim a string
-'******************************************************
-function strTrim(str As String) As String
-    st=createObject("roString")
-    st.SetString(str)
-    return st.Trim()
-end function
-
-'******************************************************
 'isnonemptystr
 'Determine if the given object supports the ifString interface
 'and returns a string of non zero length
