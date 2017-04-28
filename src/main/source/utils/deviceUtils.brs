@@ -108,6 +108,7 @@ function isHD() as boolean
     return false
 end function
 
+
 ' Writes a value to local storage
 sub storePersistentValue(key as string, value as string) as dynamic
     registry = createObject("roRegistrySection", "appLoginDetails")
@@ -231,4 +232,39 @@ function Registry_GetKeys()
     if m = invalid then return invalid
     raLog("DEBUG", "Utilities", "Registry_GetKeys valid call")
     return m.registrySection.GetKeyList()
+end function
+
+'Scaling is based on FHD mode'
+function scale(fromVal = 1 as Integer, isX = false as Boolean) as Dynamic
+    dInfo = CreateObject("roDeviceInfo")
+    mode = getDisplayMode()
+    if mode = "FHD" then
+        return fromVal
+    else if mode = "HD" then 'FHD->HD:720/1080'
+        return (fromVal * 0.66667)
+    else if mode = "SD" then 'FHD->SD:480/1080'
+        if isX then
+            return (fromVal * 0.375)
+        else
+            return (fromVal * 0.444)
+        end if
+    end if
+end function
+
+function getDisplayMode() as String
+    gaa = getGlobalAA()
+    if gaa.displayMode = Invalid then
+        deviceinfo = CreateObject("roDeviceInfo")
+        displaySize = deviceinfo.getDisplaySize()
+        if displaySize.h = 1080
+            gaa.displayMode = "FHD"
+        else if displaySize.h = 720
+            gaa.displayMode = "HD"
+        else if displaySize.h = 480
+            gaa.displayMode = "SD"
+        end if
+        return gaa.displayMode
+    else
+        return gaa.displayMode
+    end if
 end function
