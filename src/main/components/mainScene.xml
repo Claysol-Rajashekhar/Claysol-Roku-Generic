@@ -1,6 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?> 
+
 <component name="mainScene" extends="Scene">
-    <children>
-        <label text="sdfsddfdsf" />
-    </children>
+	<script type="text/brightscript" uri="pkg:/components/mainScene.brs"/>
+	<script type="text/brightscript" uri="pkg:/components/appControl.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/deviceUtils.brs"/>
+
+	<children>
+		<button
+			id = "detailpageButton"
+			translation = "[200,200]"
+			focusedTextColor = "#C0392BFF"
+			text = "Detail Page"
+			height = "80"/>
+		<detailScreen 
+			id = "detail"
+			visible = "false"/>
+		<videoScreen
+			id = "video"
+			visible = "false"/>
+	</children>
 </component>

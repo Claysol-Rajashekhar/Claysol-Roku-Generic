@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<component name="detailScreen" extends="Group">
+	<script type="text/brightscript" uri="pkg:/components/detailScreen/detailScreen.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/deviceUtils.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/typeUtils.brs"/>
+
+	<children>
+		<Poster
+			id = "image"
+			width = "1280"
+			height = "780"
+			translation = "[0,0]"
+			/>
+		<label
+			id = "title"
+			font = "font:LargeBoldSystemFont"/>
+		<label
+			id = "description"
+			font = "font:SmallestSystemFont"/>
+		<label
+			id = "cast"
+			font = "font:SmallestSystemFont"/>
+		<label
+			id = "duration"
+			font = "font:SmallestSystemFont"/>
+		<label
+			id = "rating"
+			font = "font:SmallestSystemFont"/>
+		<label
+			id = "year"
+			font = "font:SmallestSystemFont"/>
+		<label
+			id = "type"
+			font = "font:SmallestSystemFont"/>
+		<Rectangle
+			id = "focused"
+			color = "#D7DBDDFF"
+			width = "50"
+			height = "50"/>
+		<Poster
+			id = "playButton"
+			width = "50"
+			height = "50"
+			/>
+		<label
+			id = "play"
+			font = "font:SmallSystemFont"/>
+		
+	</children>
+</component>

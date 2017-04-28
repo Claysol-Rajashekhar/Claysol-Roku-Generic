@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<component name="videoScreen" extends="video">
+	<script type="text/brightscript" uri="pkg:/components/videoScreen/videoScreen.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/deviceUtils.brs"/>
+	<script type="text/brightscript" uri="pkg:/source/utils/typeUtils.brs"/>
+	<children>
+		
+	</children>
+</component>
